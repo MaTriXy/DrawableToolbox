@@ -2,12 +2,14 @@ package top.defaults.drawabletoolboxapp
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.Path
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.support.v4.content.ContextCompat
 import android.view.Gravity
 import top.defaults.drawabletoolbox.DrawableBuilder
 import top.defaults.drawabletoolbox.LayerDrawableBuilder
+import top.defaults.drawabletoolbox.PathShapeDrawableBuilder
 import top.defaults.drawabletoolbox.StateListDrawableBuilder
 import top.defaults.drawabletoolboxapp.spec.DrawableSpec
 import top.defaults.drawabletoolboxapp.spec.ImageViewSourceDrawableSpec
@@ -257,6 +259,29 @@ fun samples(context: Context): List<DrawableSpec> {
                             .build()
                 }
             }).animateReverse().initialLevel(5000),
+            ImageViewSourceDrawableSpec("Star", object : DrawableFactory {
+                fun star(): Path {
+                    val path = Path()
+                    val half = 50
+                    path.moveTo(half * 0.5f, half * 0.84f)
+                    path.lineTo(half * 1.5f, half * 0.84f)
+                    path.lineTo(half * 0.68f, half * 1.45f)
+                    path.lineTo(half * 1.0f, half * 0.5f)
+                    path.lineTo(half * 1.32f, half * 1.45f)
+                    path.lineTo(half * 0.5f, half * 0.84f)
+                    path.close()
+                    return path
+                }
+
+                override fun build(): Drawable {
+                    return PathShapeDrawableBuilder()
+                            .path(star(), 100f, 100f)
+                            .size(200)
+                            .build {
+                                it.paint.color = COLOR_DEFAULT
+                            }
+                }
+            }),
             ImageViewSourceDrawableSpec("Rotate & Sweep the Ring", object : DrawableFactory {
                 override fun build(): Drawable {
                     return DrawableBuilder()

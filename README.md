@@ -3,10 +3,11 @@
 [![platform](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://developer.android.com/index.html)
 <a target="_blank" href="https://android-arsenal.com/api?level=14"><img src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat"></a>
 [![license](https://img.shields.io/badge/license-Apache%202-green.svg)](https://github.com/duanhong169/DrawableToolbox/blob/master/LICENSE)
+[![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://github.com/KotlinBy/awesome-kotlin)
 
 English | [中文](README_cn.md)
 
-The missing DrawableToolbox for Android. Get rid of the boring and always repeated `drawable.xml` files.
+The missing DrawableToolbox for Android. Create drawables programmatically and get rid of the boring and always repeated `drawable.xml` files.
 
 <img src='art/screen-shot-1.jpg' height='500px'/> <img src='art/screen-video-1.gif' height='500px'/> <br/>
 <img src='art/screen-shot-2.jpg' height='500px'/> <img src='art/screen-video-2.gif' height='500px'/>
